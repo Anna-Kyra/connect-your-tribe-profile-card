@@ -11,7 +11,7 @@
   <footer></footer>
 </article>-->
 
-<div class="wrapper">
+<!-- <div class="wrapper">
   <header>
       <h1>Wat wil je weten?</h1>
   </header>
@@ -44,6 +44,67 @@
       </a>
   </main>
 <footer></footer>
-</div>
+</div> -->
+
+
+
+  <article>
+    <header>
+      <div class="id-number"> <h2><%= data.id %></h2></div>
+      <h1><%= data.name %> <%= data.prefix %> <%= data.surname %></h1>
+    </header>
+    <main>
+      <section>
+        <img src="/images/tape-clear-2.png" alt="tape" class="tape">
+        <img src="<%= data.avatar %>" alt="dit ben ik" class="avatar">
+        <img src="/images/tape-clear-1.png" alt="tape" class="tape">
+      </section>
+      <section>
+        <section>
+        <h3>hp</h3>
+          <div>
+            <img src="/images/icons/hart.png" alt="health">
+            <img src="/images/icons/hart.png" alt="health">
+            <img src="/images/icons/hart.png" alt="health">
+            <img src="/images/icons/hart.png" alt="health">
+            <img src="/images/icons/hart.png" alt="health">
+          </div>
+          <small>15</small>
+        </section>
+        <section>
+          <h3>atk</h3>
+          <div>
+            <img src="/images/icons/earth.png" alt="attack">
+            <img src="/images/icons/earth.png" alt="attack">
+            <img src="/images/icons/earth.png" alt="attack">
+            <img src="/images/icons/earth.png" alt="attack">
+            <img src="/images/icons/earth.png" alt="attack">
+          </div>
+          <small>10</small>
+        </section>
+
+        <section>
+          <h3>def</h3> 
+          <div>
+            <img src="/images/icons/chield.png" alt="defence">
+            <img src="/images/icons/chield.png" alt="defence">
+            <img src="/images/icons/chield.png" alt="defence">
+            <img src="/images/icons/chield.png" alt="defence">
+            <img src="/images/icons/chield.png" alt="defence">
+          </div>
+          <small>25</small>
+        </section>
+      </section>
+      <section>
+        <button>more info ^</button>
+      </section>
+
+    </main>
+    <footer>
+      <div class="id-number"><h2><%= data.id %></h2></div>
+    </footer> 
+  </article>
+
+
 
 <%- include('./partials/foot') %>
