@@ -1,6 +1,6 @@
 <%- include('./partials/head') %>
 
-<article>
+<!-- <article> 
   <header>
     <h1>Hallo</h1>
     <p>mijn naam is</p>
@@ -9,6 +9,41 @@
   <p><%= data.name %></p>
 
   <footer></footer>
-</article>
+</article>-->
+
+<div class="wrapper">
+  <header>
+      <h1>Wat wil je weten?</h1>
+  </header>
+  <main>
+      <a id="left" href="wie_is_anna-kyra.html">
+          <div class="wie_ben_ik">
+              <div class="top">
+                  <h2>Wie
+                      <span>is</span>
+                      <%= data.name %> <%= data.prefix %> <%= data.surname %></h2>
+                  <img src="/images/point.svg" alt="verwijsing">
+
+              </div>
+              <div class="border_gezicht">
+                  <div class="gezicht"></div>
+              </div>
+          </div>
+      </a>
+      <a id="right" href="wat_kan_anna-kyra.html">
+          <div class="wat_kan_ik">
+              <div class="top"></div>
+              <div class="border_laptop">
+                  <div class="laptop"></div>
+              </div>
+              <img src="/images/point.svg" alt="verwijsing">
+              <h2>Wat
+                  <span>kan</span>
+                  <%= data.name %> <%= data.prefix %> <%= data.surname %></h2>
+          </div>
+      </a>
+  </main>
+<footer></footer>
+</div>
 
 <%- include('./partials/foot') %>
