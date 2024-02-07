@@ -5,6 +5,11 @@
 }
 
 @font-face {
+  font-family: 'nanumPenScript';
+  src: url('/fonts/NanumPenScript-Regular.ttf');
+}
+
+@font-face {
   font-family: 'handschrift2';
   src: url(fonts/Handschrift2-Regular.ttf);
 }
@@ -23,6 +28,7 @@
   --color-earth: #374A2E;
   --background-img-front-earth: url(/images/earth_front.jpg);
   --background-img-back-earth: url(/images/earth_background.jpg);
+  --element-symbol: url('/public/images/icons/earth.png');
 
   font-size: 20px;
 }
@@ -42,8 +48,31 @@ body {
   backdrop-filter: blur(8px);
 
   color: var(--color-earth);
-  font-family: 'myfont';
+  font-family: 'myfont', 'nanumPenScript', sans-serif;
 
+  &.element-water {
+    --background-img-back-earth: url('/images/Underwater\ world_background.jpg');
+    --background-img-front-earth: url('/images/Underwater\ world-front.jpg');
+    --color-earth: #10315F;
+  }
+
+  &.element-earth {
+    --background-img-back-earth: url('/images/earth_background.jpg');
+    --background-img-front-earth: url('/images/earth_front.jpg');
+    --color-earth: #374A2E;
+  }
+
+  &.element-fire {
+    --background-img-back-earth: url('/images/fire-background.jpg');
+    --background-img-front-earth: url('/images/fire-front.jpg');
+    --color-earth: #8F1500;
+  }
+
+  &.element-air {
+    --background-img-back-earth: url('/images/air_background.jpg');
+    --background-img-front-earth: url('/images/air_front.jpg');
+    --color-earth: #080806;
+  }
 
 }
 
@@ -88,12 +117,16 @@ main {
 .id-number {
   position: absolute;
   background: url('/images/paper-background.jpg') var(--color-card) ;
+  /* background-color: aqua; */
   background-size: cover;
   background-position: center;
-  padding: 1rem;
-  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 1.5rem;
   border-radius: 10000px;
-
 }
 
 header .id-number {
@@ -222,14 +255,20 @@ main > section:nth-of-type(2) {
     text-align: right;
     min-width: .5em;
     width: 100%;
+    font-size: 1.5rem;
   }
 
   img {
       width: 100%;
       width: 1em;
       justify-self: center;
-      
   }
+
+  .disabled {
+    opacity: 50% !important;
+  }
+
+
 
 
 }
@@ -263,3 +302,4 @@ main > section:nth-of-type(3) {
     color: var(--color-card);
   }
 }
+
