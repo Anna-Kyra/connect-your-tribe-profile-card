@@ -20,7 +20,7 @@
     "express",
     "ejs"
   ],
-  "author": "J.P. Sturkenboom <j.p.sturkenboom@hva.nl>",
+  "author": "Anna-Kyra Strik <strik.anna-kyra@hva.nl>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fdnd-task/connect-your-tribe-profile-card/issues"

@@ -8,7 +8,9 @@ import fetchJson from './helpers/fetch-json.js'
 const data = await fetchJson('https://fdnd.directus.app/items/person/41')
 console.log(data.data.name); // uncomment om de opgehaalde data te checken
 // data.custom = JSON.parse(element)
-// console.log(data.custom.element)
+let jsonCustom = data.data.custom;
+let custom = JSON.parse(jsonCustom);
+data.data.custom = custom
 
 // Maak een nieuwe express app aan
 const app = express()
