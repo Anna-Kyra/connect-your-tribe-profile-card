@@ -51,7 +51,11 @@
   <article>
     <header>
       <div class="id-number"> <h2><%= data.id %></h2></div>
-      <h1><%= data.name %> <%= data.prefix %> <%= data.surname %></h1>
+      <% if (data.name) { %>
+        <h1><%= data.name %> <%= data.prefix %> <%= data.surname %></h1>
+      <% } else { %>
+        <h1>Name: Traveler</h1>
+        <% } %>
     </header>
     <main>
       <section>
@@ -59,10 +63,12 @@
         <img src="<%= data.avatar %>" alt="dit ben ik" class="avatar">
         <img src="/images/tape-clear-1.png" alt="tape" class="tape">
       </section>
+      <div class="element"><div></div></div>
       <section>
         <section>
+          
         <h3>hp</h3>
-          <div>
+          <div class="stats">
             <img src="/images/icons/hart.png" alt="health">
             <img src="/images/icons/hart.png" alt="health">
             <img src="/images/icons/hart.png" alt="health">
@@ -73,19 +79,18 @@
         </section>
         <section>
           <h3>atk</h3>
-          <div>
-            <img src="/images/icons/earth.png" alt="attack">
-            <img src="/images/icons/earth.png" alt="attack">
-            <img src="/images/icons/earth.png" alt="attack" class="disabled">
-            <img src="/images/icons/earth.png" alt="attack" class="disabled">
-            <img src="/images/icons/earth.png" alt="attack" class="disabled">
+          <div class="stats">
+            <div class="atk"></div>
+            <div class="atk"></div>
+            <div class="atk disabled"></div>
+            <div class="atk disabled"></div>
+            <div class="atk disabled"></div>
           </div>
           <small>10</small>
         </section>
-
         <section>
           <h3>def</h3> 
-          <div>
+          <div class="stats">
             <img src="/images/icons/chield.png" alt="defence">
             <img src="/images/icons/chield.png" alt="defence">
             <img src="/images/icons/chield.png" alt="defence">
@@ -97,6 +102,40 @@
       </section>
       <section>
         <button>more info ^</button>
+        <button class="close"> <div>x</div></button>
+        <section>
+          
+          <% if (data.name) { %>
+            <p>Name: <%= data.name %> <%= data.prefix %> <%= data.surname %></p>
+          <% } else { %>
+            <p>Name: Traveler</p>
+            <% } %>
+          
+          <% if (data.nickname) { %>
+            <p>Nickname: <%= data.nickname %></p>
+          <% } else { %><% } %>
+
+          <% if (data.role) { %>
+            <p>Role: <%= data.role %></p>
+          <% } else { %><% } %>
+
+          <% if (data.bio) { %>
+            <p>Bio: <%= data.bio %></p>
+            <% } else { %><% } %>
+          
+    
+          <% if (data.github_handle) { %>
+            <p>Github handle: <%= data.github_handle %></p>
+            <% } else { %><% } %>
+
+          <% if (data.email) { %>
+            <p>E-mail: <%= data.email %></p>
+            <% } else { %><% } %>
+          
+          <% if (data.phone_number) { %>
+            <p>Phone number: <%= data.phone_number %></p>
+            <% } else { %><% } %>
+        </section>
       </section>
 
     </main>

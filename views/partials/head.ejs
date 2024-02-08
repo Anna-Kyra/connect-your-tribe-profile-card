@@ -1,20 +1,11 @@
-<!-- <!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visitekaartje</title>
-    <link rel="stylesheet" href="/style.css">
-  </head>
-  <body> -->
-
-    <!DOCTYPE html>
-<html lang="nl">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Anna-Kyra's Visitekaartje</title>
         <link rel="stylesheet" href="/style.css">
+        <script src="/scripts/script.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link
             rel="preconnect"
@@ -25,6 +16,4 @@
             rel="stylesheet">
         <link rel="stylesheet" href="https://use.typekit.net/zza7uwg.css">
     </head>
-    <body class="element-fire">
-
-      <!-- class="element-<%= data.custom.element %>" -->
+    <body class="element-<% if (data.custom.element) { %><%= data.custom.element %><% } else { %>fire <% } %>">
